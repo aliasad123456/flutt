@@ -96,3 +96,66 @@ final  TextEditingController textController;
     );
   }
 }
+
+
+
+class pictureWidget extends StatelessWidget {
+  const pictureWidget({
+   required this.myPicture,
+   required this.text1,
+   required this.text2,
+   required this.text3,
+   required this.text4
+  }) ;
+
+
+  final String myPicture;
+  final String text1;
+  final String text2;
+  final String text3;
+  final String text4;
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 10),
+          width: double.infinity,
+          height: 250,
+          decoration: BoxDecoration(
+              border: Border.all(color: Colors.black, width: 4)
+          ),
+          //color: Colors.blue,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 25),
+                width: 150,
+                height: 220,
+                decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(myPicture)
+                    )
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:  [
+                  Text(text1),
+                  Text(text2),
+                  Text(text3),
+                  Text(text4)
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

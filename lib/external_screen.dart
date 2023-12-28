@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class externalScreen1 extends StatefulWidget {
 
@@ -13,9 +13,9 @@ class _externalScreen1State extends State<externalScreen1> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Here is your text", style: GoogleFonts.poppins(
-
-        )),
+        // child: Text("Here is your text", style: GoogleFonts.poppins(
+        //
+        // )),
       ),
     );
   }

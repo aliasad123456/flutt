@@ -3,6 +3,7 @@ import 'package:untitled27/external_screen.dart';
 import 'package:untitled27/final_assignment.dart';
 import 'package:untitled27/form_screen.dart';
 import 'package:untitled27/listview_builder_screen.dart';
+import 'package:untitled27/picture_assignment.dart';
 import 'package:untitled27/reuseable_screen.dart';
 import 'package:untitled27/stackScreen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: externalScreen1(),
+      home: pictureAssignment(),
     );
   }
 }
