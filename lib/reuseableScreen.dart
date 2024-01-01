@@ -101,19 +101,19 @@ final  TextEditingController textController;
 
 class pictureWidget extends StatelessWidget {
   const pictureWidget({
-   required this.movieImage,
-   required this.movieName,
-   required this.movieNetwork,
-   required this.movieDate,
-   required this.movieStatus,
+   required this.myPicture,
+   required this.text1,
+   required this.text2,
+   required this.text3,
+   required this.text4
   }) ;
 
 
-  final String movieImage;
-  final String movieName;
-  final String movieNetwork;
-  final String movieDate;
-  final String movieStatus;
+  final String myPicture;
+  final String text1;
+  final String text2;
+  final String text3;
+  final String text4;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -138,7 +138,7 @@ class pictureWidget extends StatelessWidget {
                     color: Colors.yellow,
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage(movieImage)
+                        image: NetworkImage(myPicture)
                     )
                 ),
               ),
@@ -146,11 +146,10 @@ class pictureWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:  [
-                  Text(movieName),
-                  Text(movieImage),
-                  Text(movieNetwork),
-                  Text(movieDate),
-                  Text(movieStatus)
+                  Text(text1),
+                  Text(text2),
+                  Text(text3),
+                  Text(text4)
                 ],
               )
             ],
