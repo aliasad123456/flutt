@@ -15,6 +15,8 @@ class apiDesc extends StatefulWidget {
 }
 
 class _apiDescState extends State<apiDesc> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +28,7 @@ class _apiDescState extends State<apiDesc> {
               return const CircularProgressIndicator();
             }
             if(snapshot.hasData){
-              Map map = jsonDecode("{$snapshot.data}");
+              Map map = jsonDecode("${snapshot.data}");
               String movieName = map["tvShow"]["name"];
               return Text(movieName);
             }
@@ -45,9 +47,10 @@ class _apiDescState extends State<apiDesc> {
             return const CircularProgressIndicator();
           }
           if(snapshot.hasData){
-            Map map = jsonDecode("{$snapshot.data}");
-            String movieName = map["tvShow"]["name"];
-            return Text(movieName);
+            Map map = jsonDecode("${snapshot.data}");
+            debugPrint("$map");
+            String movieDescription = map["tvShow"]["description"];
+            return Center(child: Text(movieDescription));
           }
           if(snapshot.hasError){
             return const Icon(Icons.error, color: Colors.red,);

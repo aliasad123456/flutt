@@ -20,8 +20,8 @@ class _pictureAssignmentState extends State<pictureAssignment> {
         movieImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrjUuo_mciXRd5Wr53a45sACYngaWvb5u04g&usqp=CAU',
         movieName: 'movie name',
         movieNetwork: 'movie release date',
-        movieDate: 'movie duration',
-        movieStatus: 'movie start time',
+        movieDate: 'movie }duration',
+        movieStatus: 'movie start time'
       )
     );
   }
