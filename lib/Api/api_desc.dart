@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:untitled27/Api/api_services.dart';
 import 'api_fetch_screen.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class apiDesc extends StatefulWidget {
 
@@ -50,7 +51,20 @@ class _apiDescState extends State<apiDesc> {
             Map map = jsonDecode("${snapshot.data}");
             debugPrint("$map");
             String movieDescription = map["tvShow"]["description"];
-            return Center(child: Text(movieDescription));
+            String movieName = map["tvShow"]["name"];
+            return  Column(
+              children: [
+                Stack(
+                  children: [
+                    const SizedBox(
+                      width: double.infinity,
+                      height: 242,
+                    ),
+                    CarouselSlider(items: items, options: options)
+                  ],
+                )
+              ],
+            );
           }
           if(snapshot.hasError){
             return const Icon(Icons.error, color: Colors.red,);
